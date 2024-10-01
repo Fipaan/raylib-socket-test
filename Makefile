@@ -20,7 +20,7 @@ client: ./src/client.c
 	$(CC) $(CFLAGS_C) $(INCLUDES) -o $(WORKING_DIR)/client $(WORKING_DIR)/src/client.c $(LIBS_C)
 
 client-build: ./src/client.c
-	$(CC) $(CFLAGS_C) $(INCLUDES) -c -o $(WORKING_DIR)/client.o -c $(WORKING_DIR)/src/client.c && \
+	$(CC) $(CFLAGS_C) $(INCLUDES) -c -o $(WORKING_DIR)/client.o -c $(WORKING_DIR)/src/client.c $(LIBS_C) && \
 	g++ -o $(WORKING_DIR)/client $(WORKING_DIR)/client.o $(BUILD_LIBS_C) $(STATIC) && \
 	rm $(WORKING_DIR)/client.o
 
@@ -28,6 +28,6 @@ server: ./src/server.c
 	$(CC) $(CFLAGS_S) $(INCLUDES) -o $(WORKING_DIR)/server $(WORKING_DIR)/src/server.c $(LIBS_S)
 
 server-build: ./src/server.c
-	$(CC) $(CFLAGS_S) $(INCLUDES) -c -o $(WORKING_DIR)/server.o -c $(WORKING_DIR)/src/server.c && \
+	$(CC) $(CFLAGS_S) $(INCLUDES) -c -o $(WORKING_DIR)/server.o -c $(WORKING_DIR)/src/server.c $(LIBS_S) && \
 	g++ -o $(WORKING_DIR)/server $(WORKING_DIR)/server.o $(BUILD_LIBS_S) $(STATIC) && \
 	rm $(WORKING_DIR)/server.o

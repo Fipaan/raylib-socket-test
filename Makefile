@@ -1,3 +1,5 @@
+CC=cc
+LINKER=g++
 WORKING_DIR=.
 CFLAGS=-Wall -Wextra -ggdb -std=c11 -D=_GNU_SOURCE -O3
 CFLAGS_S=$(CFLAGS)
@@ -21,7 +23,7 @@ client: ./src/client.c
 
 client-build: ./src/client.c
 	$(CC) $(CFLAGS_C) $(INCLUDES) -c -o $(WORKING_DIR)/client.o -c $(WORKING_DIR)/src/client.c && \
-	g++ -o $(WORKING_DIR)/client $(WORKING_DIR)/client.o $(BUILD_LIBS_C) $(STATIC) && \
+	$(LINKER) -o $(WORKING_DIR)/client $(WORKING_DIR)/client.o $(BUILD_LIBS_C) $(STATIC) && \
 	rm $(WORKING_DIR)/client.o
 
 server: ./src/server.c
@@ -29,5 +31,5 @@ server: ./src/server.c
 
 server-build: ./src/server.c
 	$(CC) $(CFLAGS_S) $(INCLUDES) -c -o $(WORKING_DIR)/server.o -c $(WORKING_DIR)/src/server.c && \
-	g++ -o $(WORKING_DIR)/server $(WORKING_DIR)/server.o $(BUILD_LIBS_S) $(STATIC) && \
+	$(LINKER) -o $(WORKING_DIR)/server $(WORKING_DIR)/server.o $(BUILD_LIBS_S) $(STATIC) && \
 	rm $(WORKING_DIR)/server.o

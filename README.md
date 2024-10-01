@@ -25,7 +25,7 @@ so I have to link to standard libs, such as `libm` and `libc`, so it's mostly si
 #### Client:
 
 ```console
-$ ./client
+   ./client
 ```
 
 ###### Note: You can put l or r flag, to align window to the left or right
@@ -33,7 +33,7 @@ $ ./client
 #### Server:
 
 ```console
-$ ./server
+   ./server
 ```
 
 ---
@@ -43,11 +43,11 @@ $ ./server
 #### Client:
 
 ```console
-$ make client-build
+   make client-build
 ```
 
 #### Server:
 
 ```console
-$ make server-build
+   make server-build
 ```

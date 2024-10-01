@@ -1,4 +1,3 @@
-CC=clang
 WORKING_DIR=.
 CFLAGS=-Wall -Wextra -ggdb -std=c11 -D=_GNU_SOURCE -O3
 CFLAGS_S=$(CFLAGS)

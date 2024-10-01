@@ -20,12 +20,14 @@ change this, just put your ip in "common.h"
 For some reason I couldn't make fully statically linked executable,
 so I have to link to standard libs, such as `libm` and `libc`, so it's mostly single executable.
 
+---
+
 ### How to run?
 
 #### Client:
 
 ```console
-   ./client
+./client
 ```
 
 ###### Note: You can put l or r flag, to align window to the left or right
@@ -33,7 +35,7 @@ so I have to link to standard libs, such as `libm` and `libc`, so it's mostly si
 #### Server:
 
 ```console
-   ./server
+./server
 ```
 
 ---
@@ -43,11 +45,11 @@ so I have to link to standard libs, such as `libm` and `libc`, so it's mostly si
 #### Client:
 
 ```console
-   make client-build
+make client-build
 ```
 
 #### Server:
 
 ```console
-   make server-build
+make server-build
 ```

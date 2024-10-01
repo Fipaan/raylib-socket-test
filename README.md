@@ -33,7 +33,7 @@ $ ./client
 #### Server:
 
 ```console
-./server
+$ ./server
 ```
 
 ---
